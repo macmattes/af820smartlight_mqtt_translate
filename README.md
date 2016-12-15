@@ -5,8 +5,11 @@ Benötigt eine Node.js Installation obiges Projekt mit allen Abhängigkeiten und
 strong-pubsub und strong-pubsub-mqtt.
 
 ins installverzeichnis wechseln und strong-pubsub nachinstallieren
+
 cd /usr/local/share/af820smartlight
+
 npm install strong-pubsub
+
 npm install strong-pubsub-mqtt
 
 translate.js im Verzeichnis ablegen
@@ -14,6 +17,7 @@ translate.js im Verzeichnis ablegen
 config von af820smartlight einstellen, und dienste starten
 
 node app.js -c cfg/config.json -l cfg/log4js.json
+
 node mqtt-translate.js
 
 
@@ -41,6 +45,7 @@ attr smartlight publishSet_checkWifi cmnd/smartlight/EG_Wohnzimmer/checkWifi
 attr smartlight publishSet_checkStatus cmnd/smartlight/EG_Wohnzimmer/checkStatus
 
 für die Antworten noch ein AutoSubscribe anlegen
+
 attr smartlight autoSubscribeReadings stat/smartlight/EG_Wohnzimmer/+
 
 ein Colorpicker für die Farbe und ein Slider für die Helligkeit
