@@ -7,7 +7,7 @@ var pub = new Client({host: '127.0.0.1', port: 1883}, Adapter);
 sub.subscribe('stat_json/smartlight/#');
 sub.on('message', function(topic, msg) {
  var subtopic = 'stat' + topic.substr(9, topic.length-9);
- console.log(topic, msg.toString());
+ console.log(subtopic, topic, msg.toString());
 
  var data = JSON.parse(msg);
 
@@ -19,8 +19,7 @@ sub.on('message', function(topic, msg) {
       result.push(toArray(value));
     } else {
       result.push(value);
-      console.log(prop,value);
-      sub.publish( subtopic + prop, value.toString());
+      sub.publish( subtopic + '/' + prop, value.toString());
     }
   }
   return result;
@@ -56,5 +55,6 @@ pub.on('message', function(topic, msg) {
    } else if (tres[tres.length-1] === 'setColorWhite') {
       pub.publish( pubtopic.substr(0, pubtopic.length - 14) , '{ "cmd" : "setColor", "red": 0, "green": 0, "blue": 0, "white": ' + res[0] + ', "time": 300, "lux": ' + res[0] + ' }');
    }
+
 
 });
