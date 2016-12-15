@@ -25,13 +25,19 @@ zur Lampe       "cmnd/smartlight/{path}" -> "cmnd_json/smartlight/{path}"
 die Antworten   "stat_json/smartlight/{path}" -> "stat/smartlight/{path}"
 
 in Fhem ein MQTT Device je Lampengruppe anlegen
+
 define smartlight MQTT_DEVICE
 
 die Publish Atribute anlegen
+
 attr smartlight publishSet_setColorRGB cmnd/smartlight/EG_Wohnzimmer/setColorRGB
+
 attr smartlight publishSet_setColorWhite cmnd/smartlight/EG_Wohnzimmer/setColorWhite 
+
 attr smartlight publishSet_setSleep cmnd/smartlight/EG_Wohnzimmer/setSleep
+
 attr smartlight publishSet_checkWifi cmnd/smartlight/EG_Wohnzimmer/checkWifi
+
 attr smartlight publishSet_checkStatus cmnd/smartlight/EG_Wohnzimmer/checkStatus
 
 für die Antworten noch ein AutoSubscribe anlegen
