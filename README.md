@@ -8,6 +8,7 @@ wir verbinden uns auf unseren lokalen mqtt-broker 127.0.0.1 es kann  aber auch j
 
 die Übersetzung   
 zur Lampe       "cmnd/smartlight/{path}" -> "cmnd_json/smartlight/{path}" 
+
 die Antworten   "stat_json/smartlight/{path}" -> "stat/smartlight/{path}"
 
 in Fhem ein MQTT Device je Lampengruppe anlegen
