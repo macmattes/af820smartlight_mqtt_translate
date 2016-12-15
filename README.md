@@ -38,6 +38,7 @@ für die Antworten noch ein AutoSubscribe anlegen
 attr smartlight autoSubscribeReadings stat/smartlight/EG_Wohnzimmer/+
 
 ein Colorpicker für die Farbe und ein Slider für die Helligkeit
+
 attr samrtlight widgetOverride setColorWhite:slider,0,1,255 setColorRGB:colorpicker
 
 schon laufen die Lampen in Fhem 
