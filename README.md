@@ -14,7 +14,7 @@ translate.js im Verzeichnis ablegen
 config von af820smartlight einstellen, und dienste starten
 
 node app.js -c cfg/config.json -l cfg/log4js.json
-node translator.js
+node mqtt-translate.js
 
 
 wir verbinden uns auf unseren lokalen mqtt-broker 127.0.0.1 es kann  aber auch jeder andere sein
