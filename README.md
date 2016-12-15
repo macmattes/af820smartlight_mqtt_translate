@@ -1,0 +1,1 @@
+# af820smartlight_mqtt_translator
